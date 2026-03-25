@@ -1,0 +1,17 @@
+[build]
+  base = "."
+  publish = "dist"
+  command = "npm install && npm run build"
+
+# Production (main branch)
+[context.production]
+  command = "npm install && npm run build"
+
+# Staging branch deploy
+[context.staging]
+  command = "npm install && npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
