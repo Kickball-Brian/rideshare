@@ -1,14 +1,161 @@
 ---
 layout: base.njk
-title: RideshareLogic — Legal Help for Rideshare Assault Victims
-description: Were you assaulted in a rideshare? You may be entitled to compensation. Get a free case review today.
-bodyClass: page-home
+title: Rideshare Abuse Lawsuit — Free Case Review
+description: If you were assaulted, harassed, or abused during an Uber or Lyft ride, you may have a serious legal claim against the company — not just the driver. Get a free case review today.
 ---
 
-<section class="hero section">
-  <div class="container">
-    <h1>Were You Assaulted<br>in a Rideshare?</h1>
-    <p>You may be entitled to significant compensation. Our network of experienced attorneys is ready to review your case — for free.</p>
-    <a href="/contact/" class="btn btn-primary btn-lg">Get a Free Case Review</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+
+    <div class="hero-content">
+      <h1>
+        You Deserve<br>
+        <em>Justice &amp; Answers.</em>
+      </h1>
+      <p class="hero-sub">
+        If you were assaulted, harassed, or abused during an Uber or Lyft ride,
+        you may have a serious legal claim against the company — not just the driver.
+        Our attorneys will review your case at no cost and no obligation.
+      </p>
+      <div class="trust-row">
+        <span class="trust-item">100% Confidential</span>
+        <span class="trust-item">No Fees Unless You Win</span>
+        <span class="trust-item">Free Evaluation</span>
+      </div>
+    </div>
+
+    <!-- INTAKE FORM -->
+    <div class="form-card" id="intake-form">
+      <div class="form-header">
+        <h2>Get a Free Case Review</h2>
+        <p>Tell us about yourself and we'll contact you to discuss your legal options. 100% confidential.</p>
+      </div>
+
+      <form id="leadForm" novalidate>
+
+        <span class="company-label">Rideshare Company *</span>
+        <div class="company-toggle" id="companyToggle">
+          <div class="company-tile" data-value="Uber" onclick="selectCompany(this)">
+            <span class="company-icon uber-icon">U</span>
+            Uber
+          </div>
+          <div class="company-tile" data-value="Lyft" onclick="selectCompany(this)">
+            <span class="company-icon lyft-icon">L</span>
+            Lyft
+          </div>
+        </div>
+        <div id="company-error" style="display:none; font-size:11px; color:#c94040; margin-top:-12px; margin-bottom:16px;">Please select Uber or Lyft.</div>
+        <input type="hidden" id="companyValue" name="company" value="">
+
+        <div class="field" id="field-name">
+          <label for="full-name">Full Name *</label>
+          <input type="text" id="full-name" name="name" placeholder="Your full name" autocomplete="name">
+          <span class="err-msg">Please enter your full name.</span>
+        </div>
+
+        <div class="field" id="field-phone">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+          <span class="err-msg">Please enter a valid phone number.</span>
+        </div>
+
+        <div class="field" id="field-email">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com" autocomplete="email">
+          <span class="err-msg">Please enter a valid email address.</span>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit for Free Case Review →</button>
+        <div class="tcpa"><input type="checkbox" class="form-check-input" value="1"><label class="tcpa-label"><span><small>By clicking on the box, you agree to be contacted about your potential case by LawLogic (Email Agency), at the phone number and email address you provided above. You may receive live calls, automated calls, emails or text messages (You may receive up to 4 texts per month. Message and data rates may apply. Opt-out of text messages by replying STOP). You understand consent is not a condition of any purchase of any goods or services. You understand that submitting this form does not create an attorney-client relationship. You also consent to our <a href="/privacy/" target="_blank">Privacy Policy</a></small></span><sup class="text-danger">*</sup></label>
+            </div>
+
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        <div class="success-icon">✓</div>
+        <h3>We've Received Your Case</h3>
+        <p>An representative from our team will contact you to discuss your options confidentially.</p>
+      </div>
+    </div>
+
   </div>
+</section>
+
+
+
+<!-- IMAGE BREAK — Image 2 with copy -->
+<div class="image-break">
+  <div class="image-break-img">
+    <img src="/img/abuse-rideshare.jpg" alt="Rideshare passenger in uncomfortable situation with driver">
+  </div>
+  <div class="image-break-text">
+    <div class="section-label">The Reality</div>
+    <h2>When a Ride Becomes <em>Dangerous</em></h2>
+    <p>Every year, thousands of passengers across the United States experience assault, harassment, and abuse at the hands of rideshare drivers. Many victims suffer in silence — unsure of their rights or whether a company like Uber or Lyft can be held accountable.</p>
+    <p>The answer is often yes. These companies have a legal duty to protect the passengers who use their platforms. Failing to screen drivers, ignoring complaints, and prioritizing profits over safety can make them liable for what their drivers do.</p>
+    <a href="#intake-form" class="cta-link">Find Out If You Have a Case →</a>
+  </div>
+</div>
+
+<!-- WHY SECTION -->
+<section class="why-section">
+  <div class="section-label">Why Act Now</div>
+  <h2 class="section-title">Uber &amp; Lyft May Be <em>Responsible</em> — Not Just the Driver</h2>
+  <div class="cards-grid">
+    <div class="why-card" data-num="01">
+      <div class="why-icon">⚖️</div>
+      <h3>Corporate Negligence Claims</h3>
+      <p>Uber and Lyft have faced allegations of failing to conduct adequate background checks, ignoring repeat offenders, and silencing victims. Your claim may extend far beyond the individual driver.</p>
+    </div>
+    <div class="why-card" data-num="02">
+      <div class="why-icon">⏰</div>
+      <h3>Time Limits Are Critical</h3>
+      <p>Each state has a statute of limitations on sexual assault and personal injury claims. Waiting can forfeit your right to compensation. Get a free review before it is too late.</p>
+    </div>
+    <div class="why-card" data-num="03">
+      <div class="why-icon">🔒</div>
+      <h3>Confidential &amp; No Risk</h3>
+      <p>Our case review is completely free, confidential, and carries no obligation. You only pay if we win your case — and your identity is protected throughout the entire process.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIABILITY -->
+<section class="liability-section">
+  <div class="liability-image">
+    <img src="/img/rideshare-lawyer.webp" alt="Rideshare abuse case information" id="liability-img">
+  </div>
+  <div class="liability-grid">
+    <div class="liability-block">
+      <h3>You May Qualify If…</h3>
+      <ul class="liability-list">
+        <li><span class="li-dot"></span>The assault occurred during a rideshare trip, at pickup, drop‑off, or immediately after using the app</li>
+        <li><span class="li-dot"></span>You experienced non-consensual touching, sexual assault, rape, forced kissing, exposure, threats, or kidnapping</li>
+        <li><span class="li-dot"></span>You were a passenger, unaccompanied minor, or a family member of someone harmed or killed</li>
+        <li><span class="li-dot"></span>You reported the incident to Uber or Lyft and received little or no meaningful response</li>
+        <li><span class="li-dot"></span>The incident occurred in the United States (most active state and federal courts)</li>
+        <li><span class="li-dot"></span>You were incapacitated or unable to consent at the time of the incident</li>
+      </ul>
+    </div>
+    <div class="liability-block highlight-block">
+      <h3>What Our Attorneys Investigate</h3>
+      <ul class="liability-list">
+        <li><span class="li-dot"></span>Whether Uber or Lyft failed to properly screen, vet, or remove the driver from their platform</li>
+        <li><span class="li-dot"></span>Patterns of prior complaints against the driver that the company may have ignored</li>
+        <li><span class="li-dot"></span>Route deviations, locked doors, or other red‑flag behaviors captured in app data</li>
+        <li><span class="li-dot"></span>The company's response (or non-response) after the incident was reported</li>
+        <li><span class="li-dot"></span>Whether any signed release or settlement agreement affects your remaining options</li>
+        <li><span class="li-dot"></span>Statute of limitations deadlines — including extended windows for minors in many states</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="bottom-cta">
+  <h2>Your Story <em>Matters.</em> Your Justice Starts Here.</h2>
+  <p>A free, confidential case review takes less than two minutes and could be the most important step you take.</p>
+  <a href="#intake-form" class="big-cta">Start My Free Case Review →</a>
 </section>

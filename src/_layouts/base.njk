@@ -3,13 +3,14 @@
 <head>
   {% include "head.njk" %}
 </head>
-<body class="{{ bodyClass or '' }}">
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRQBT4BW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   {% include "nav.njk" %}
 
-  <main id="main-content">
-    {{ content | safe }}
-  </main>
+  {{ content | safe }}
 
   {% include "footer.njk" %}
 
