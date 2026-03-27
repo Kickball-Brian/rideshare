@@ -1,7 +1,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ description or 'Rideshare Abuse Lawsuit — Free Case Review' }}" />
+<meta name="robots" content="noindex, nofollow" />
 <title>{{ title or 'Rideshare Abuse Lawsuit — Free Case Review' }}</title>
+{% if schema %}{{ schema | safe }}{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://rideshareabuselawsuit.org/style.min.css">

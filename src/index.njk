@@ -2,6 +2,40 @@
 layout: base.njk
 title: Rideshare Abuse Lawsuit — Free Case Review
 description: If you were assaulted, harassed, or abused during an Uber or Lyft ride, you may have a serious legal claim against the company — not just the driver. Get a free case review today.
+schema: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://rideshareabuselawsuit.org/#organization",
+        "name": "Rideshare Abuse Lawsuit",
+        "url": "https://rideshareabuselawsuit.org",
+        "description": "Connecting rideshare assault victims with experienced legal counsel."
+      },
+      {
+        "@type": "LegalService",
+        "@id": "https://rideshareabuselawsuit.org/#service",
+        "name": "Rideshare Abuse Lawsuit",
+        "url": "https://rideshareabuselawsuit.org",
+        "description": "Free case reviews for rideshare assault and abuse victims. Connect with experienced attorneys who handle Uber and Lyft cases.",
+        "serviceType": "Legal Referral Service",
+        "areaServed": "US",
+        "provider": { "@id": "https://rideshareabuselawsuit.org/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://rideshareabuselawsuit.org/#webpage",
+        "url": "https://rideshareabuselawsuit.org/",
+        "name": "Rideshare Abuse Lawsuit — Free Case Review",
+        "description": "If you were assaulted, harassed, or abused during an Uber or Lyft ride, you may have a serious legal claim against the company — not just the driver. Get a free case review today.",
+        "isPartOf": { "@id": "https://rideshareabuselawsuit.org/#organization" },
+        "about": { "@id": "https://rideshareabuselawsuit.org/#service" }
+      }
+    ]
+  }
+  </script>
 ---
 
 <!-- HERO -->
