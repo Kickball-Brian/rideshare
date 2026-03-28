@@ -1,0 +1,333 @@
+---
+layout: base.njk
+title: CCPA Privacy Request | Rideshare Abuse Lawsuit
+description: California residents can submit requests under the California Consumer Privacy Act (CCPA) to know, delete, or opt out of the sale of their personal information.
+bodyClass: page-ccpa
+schema: |
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://rideshareabuselawsuit.org/ccpa/#webpage",
+    "url": "https://rideshareabuselawsuit.org/ccpa/",
+    "name": "CCPA Privacy Request | Rideshare Abuse Lawsuit",
+    "description": "California residents can submit requests under the California Consumer Privacy Act (CCPA) to know, delete, or opt out of the sale of their personal information.",
+    "isPartOf": { "@id": "https://rideshareabuselawsuit.org/#organization" }
+  }
+  </script>
+---
+
+<style>
+/* ── CCPA Page — same style as Privacy & Terms ────────── */
+.prv-hero {
+  background: #f5f5f5;
+  padding: 72px 24px 56px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.prv-hero-inner {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.prv-breadcrumb {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 20px;
+  letter-spacing: 0.03em;
+}
+.prv-breadcrumb a { color: #888; text-decoration: none; }
+.prv-breadcrumb a:hover { color: #c49a6c; }
+.prv-breadcrumb span { margin: 0 8px; }
+.prv-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 900;
+  color: #111;
+  margin: 0 0 14px;
+  line-height: 1.1;
+}
+.prv-hero p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+.prv-body {
+  background: #fff;
+  padding: 0 24px 80px;
+}
+.prv-body-inner {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.prv-intro {
+  padding: 48px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+.prv-intro p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #333;
+  margin: 0 0 16px;
+}
+.prv-intro strong { color: #111; }
+.prv-intro a { color: #c49a6c; text-decoration: none; }
+.prv-intro a:hover { text-decoration: underline; }
+
+.prv-section {
+  padding: 52px 0 48px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.prv-section:last-child { border-bottom: none; }
+
+.prv-section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c49a6c;
+  margin-bottom: 16px;
+}
+.prv-section-label::after {
+  content: '';
+  flex: 1;
+  max-width: 48px;
+  height: 1px;
+  background: #c49a6c;
+  opacity: 0.5;
+}
+.prv-section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(22px, 3.5vw, 30px);
+  font-weight: 900;
+  color: #111;
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+.prv-short {
+  border-left: 3px solid #c49a6c;
+  margin: 0 0 28px;
+  padding: 2px 0 2px 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+  line-height: 1.65;
+}
+.prv-section p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #333;
+  margin: 0 0 18px;
+}
+.prv-section p:last-child { margin-bottom: 0; }
+.prv-section p strong { color: #111; }
+.prv-section a { color: #c49a6c; text-decoration: none; }
+.prv-section a:hover { text-decoration: underline; }
+.prv-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+.prv-section ul li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #333;
+  padding: 6px 0 6px 20px;
+  position: relative;
+  line-height: 1.65;
+}
+.prv-section ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #c49a6c;
+  font-weight: 700;
+}
+.prv-section ul li strong { color: #111; }
+
+/* ── CCPA Request Form ────────────────────────────────── */
+.ccpa-form {
+  margin-top: 8px;
+}
+.ccpa-field {
+  margin-bottom: 20px;
+}
+.ccpa-field label {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+  letter-spacing: 0.01em;
+}
+.ccpa-field input,
+.ccpa-field select,
+.ccpa-field textarea {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: #222;
+  background: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.ccpa-field input:focus,
+.ccpa-field select:focus,
+.ccpa-field textarea:focus {
+  outline: none;
+  border-color: #c49a6c;
+}
+.ccpa-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+.ccpa-field select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+.ccpa-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 520px) {
+  .ccpa-row { grid-template-columns: 1fr; }
+}
+.ccpa-submit {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #c49a6c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+.ccpa-submit:hover { background: #a87d52; }
+.ccpa-note {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+.ccpa-note a { color: #c49a6c; text-decoration: none; }
+.ccpa-note a:hover { text-decoration: underline; }
+</style>
+
+<!-- HERO -->
+<div class="prv-hero">
+  <div class="prv-hero-inner">
+    <div class="prv-breadcrumb">
+      <a href="/">Home</a><span>›</span>CCPA Privacy Request
+    </div>
+    <h1>CCPA Privacy Request</h1>
+    <p>For California residents — exercise your rights under the California Consumer Privacy Act.</p>
+  </div>
+</div>
+
+<div class="prv-body">
+  <div class="prv-body-inner">
+
+    <!-- Intro -->
+    <div class="prv-intro">
+      <p>California residents can use this webform to submit requests under the <strong>California Consumer Privacy Act (CCPA)</strong> regarding personal information collected by <strong>Rideshare Abuse Lawsuit</strong> ("we," "us," or "our") that is subject to the CCPA.</p>
+      <p>If you are a California resident and would like to know about or obtain the personal information we maintain about you, request that we delete your information, or opt out of our sale of your information, you may submit a request using the form below or by sending an email to <a href="mailto:CONTACT_EMAIL_HERE">CONTACT_EMAIL_HERE</a>.</p>
+      <p>You will first be required to verify your identity as required by the CCPA and as outlined in our <a href="/privacy/">Privacy Policy</a>. If you are an authorized agent acting on behalf of a consumer, please submit a written, signed permission from the consumer to <a href="mailto:CONTACT_EMAIL_HERE">CONTACT_EMAIL_HERE</a> as proof of your authorization.</p>
+    </div>
+
+    <!-- Your Rights -->
+    <div class="prv-section">
+      <div class="prv-section-label">Your Rights</div>
+      <h2>What You Can Request</h2>
+      <p class="prv-short">California residents have specific rights regarding their personal information under the CCPA.</p>
+      <ul>
+        <li><strong>Right to Know</strong> — Request disclosure of the categories and specific pieces of personal information we have collected about you, the sources, our business purpose for collecting it, and the third parties with whom we share it.</li>
+        <li><strong>Right to Delete</strong> — Request that we delete personal information we have collected from you, subject to certain exceptions.</li>
+        <li><strong>Right to Opt-Out</strong> — Request that we stop selling your personal information to third parties.</li>
+        <li><strong>Right to Non-Discrimination</strong> — We will not discriminate against you for exercising any of your CCPA rights.</li>
+      </ul>
+    </div>
+
+    <!-- Request Form -->
+    <div class="prv-section">
+      <div class="prv-section-label">Submit a Request</div>
+      <h2>CCPA Request Form</h2>
+      <p class="prv-short">Complete the form below. We will respond to verified requests within 45 days as required by the CCPA.</p>
+
+      <form class="ccpa-form" name="ccpa-request" method="POST" action="#">
+        <div class="ccpa-field">
+          <label for="ccpa-request-type">Request Type *</label>
+          <select id="ccpa-request-type" name="request_type" required>
+            <option value="" disabled selected>Select a request type…</option>
+            <option value="know">Right to Know — What information do you have about me?</option>
+            <option value="delete">Right to Delete — Please delete my personal information</option>
+            <option value="opt-out">Right to Opt-Out — Stop selling my personal information</option>
+          </select>
+        </div>
+
+        <div class="ccpa-row">
+          <div class="ccpa-field">
+            <label for="ccpa-first-name">First Name *</label>
+            <input type="text" id="ccpa-first-name" name="first_name" placeholder="Jane" autocomplete="given-name" required>
+          </div>
+          <div class="ccpa-field">
+            <label for="ccpa-last-name">Last Name *</label>
+            <input type="text" id="ccpa-last-name" name="last_name" placeholder="Smith" autocomplete="family-name" required>
+          </div>
+        </div>
+
+        <div class="ccpa-field">
+          <label for="ccpa-email">Email Address *</label>
+          <input type="email" id="ccpa-email" name="email" placeholder="you@email.com" autocomplete="email" required>
+        </div>
+
+        <div class="ccpa-field">
+          <label for="ccpa-phone">Phone Number</label>
+          <input type="tel" id="ccpa-phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+        </div>
+
+        <div class="ccpa-field">
+          <label for="ccpa-details">Additional Details <span style="font-weight:400;color:#999;">(optional)</span></label>
+          <textarea id="ccpa-details" name="details" placeholder="Provide any additional information to help us locate your records or process your request…"></textarea>
+        </div>
+
+        <div class="ccpa-field">
+          <label for="ccpa-agent">
+            <input type="checkbox" id="ccpa-agent" name="authorized_agent" value="1" style="width:auto;margin-right:8px;">
+            I am submitting this request as an authorized agent on behalf of a California resident
+          </label>
+        </div>
+
+        <button type="submit" class="ccpa-submit">Submit CCPA Request →</button>
+
+        <p class="ccpa-note">
+          We will acknowledge your request within <strong>10 business days</strong> and respond within <strong>45 calendar days</strong> of receipt. If we need additional time, we will notify you of the reason and extension period. For questions, review our <a href="/privacy/">Privacy Policy</a> or email <a href="mailto:CONTACT_EMAIL_HERE">CONTACT_EMAIL_HERE</a>.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>
