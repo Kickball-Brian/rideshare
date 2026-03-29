@@ -38,7 +38,6 @@
 .footer-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
   flex-wrap: wrap;
 }
 .footer-nav a {
@@ -47,6 +46,12 @@
   text-decoration: none;
   opacity: 0.75;
   transition: opacity 0.2s;
+  padding: 0 12px;
+  border-left: 1px solid currentColor;
+}
+.footer-nav a:first-child {
+  border-left: none;
+  padding-left: 0;
 }
 .footer-nav a:hover {
   opacity: 1;
