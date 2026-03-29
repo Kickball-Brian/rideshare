@@ -1,35 +1,47 @@
 <style>
 .site-footer {
-  padding: 32px 24px 0;
+  padding: 32px 0 0;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 .footer-top {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
   gap: 48px;
   padding-bottom: 24px;
 }
 .footer-disclaimer {
-  flex: 1;
   font-size: 0.7rem;
   font-weight: 400;
   line-height: 1.65;
   margin: 0;
+  text-align: right;
 }
 .footer-disclaimer strong {
   font-weight: 600;
 }
 .footer-divider {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 1px;
+}
+.footer-divider::after {
+  content: '';
+  display: block;
   height: 1px;
   background: currentColor;
   opacity: 0.15;
 }
 .footer-bottom {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
   padding: 18px 0 28px;
-  flex-wrap: wrap;
 }
 .footer-copy {
   font-size: 0.7rem;
@@ -39,6 +51,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .footer-nav a {
   font-size: 0.7rem;
@@ -59,16 +72,18 @@
 }
 @media (max-width: 640px) {
   .footer-top {
-    flex-direction: column;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .footer-disclaimer {
+    text-align: left;
   }
   .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr;
     gap: 12px;
   }
   .footer-nav {
-    gap: 14px;
+    justify-content: flex-start;
   }
 }
 </style>
@@ -76,24 +91,28 @@
 <footer class="site-footer">
 
   <!-- Top: logo left, disclaimer right -->
-  <div class="footer-top">
-    <a href="/" class="nav-logo">
-      <span class="logo-text">Rideshare Abuse <strong>Lawsuit</strong></span>
-    </a>
-    <p class="footer-disclaimer"><strong>Legal Disclaimer:</strong> This website is attorney advertising. The information on this site is for general informational purposes only and does not constitute legal advice. Contacting us does not create an attorney‑client relationship. Past results do not guarantee future outcomes. No representation is made that the quality of legal services performed is greater than the quality of legal services performed by other lawyers. This advertisement is not for legal services related to an incident that occurred in California or that a California court would have jurisdiction over.</p>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="/" class="nav-logo">
+        <span class="logo-text">Rideshare Abuse <strong>Lawsuit</strong></span>
+      </a>
+      <p class="footer-disclaimer"><strong>Legal Disclaimer:</strong> This website is attorney advertising. The information on this site is for general informational purposes only and does not constitute legal advice. Contacting us does not create an attorney‑client relationship. Past results do not guarantee future outcomes. No representation is made that the quality of legal services performed is greater than the quality of legal services performed by other lawyers. This advertisement is not for legal services related to an incident that occurred in California or that a California court would have jurisdiction over.</p>
+    </div>
   </div>
 
   <div class="footer-divider"></div>
 
   <!-- Bottom: copyright left, nav right -->
-  <div class="footer-bottom">
-    <span class="footer-copy">&copy; {{ "" | getYear }} Rideshare Abuse Lawsuit. All rights reserved.</span>
-    <nav class="footer-nav">
-      <a href="/privacy/">Privacy Notice</a>
-      <a href="/ccpa-policy/">CCPA Privacy Policy</a>
-      <a href="/terms-conditions/">Terms &amp; Conditions</a>
-      <a href="/ccpa/">CCPA Request</a>
-    </nav>
+  <div class="footer-inner">
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; {{ "" | getYear }} Rideshare Abuse Lawsuit. All rights reserved.</span>
+      <nav class="footer-nav">
+        <a href="/privacy/">Privacy Notice</a>
+        <a href="/ccpa-policy/">CCPA Privacy Policy</a>
+        <a href="/terms-conditions/">Terms &amp; Conditions</a>
+        <a href="/ccpa/">CCPA Request</a>
+      </nav>
+    </div>
   </div>
 
 </footer>
