@@ -1,24 +1,96 @@
+<style>
+.site-footer {
+  padding: 32px 24px 0;
+}
+.footer-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  padding-bottom: 24px;
+}
+.footer-disclaimer {
+  flex: 1;
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1.65;
+  margin: 0;
+}
+.footer-disclaimer strong {
+  font-weight: 600;
+}
+.footer-divider {
+  height: 1px;
+  background: currentColor;
+  opacity: 0.15;
+}
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0 28px;
+  flex-wrap: wrap;
+}
+.footer-copy {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+.footer-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+@media (max-width: 640px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .footer-nav {
+    gap: 14px;
+  }
+}
+</style>
+
 <footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-brand">
-      <a href="/" class="nav-logo">
-        <span class="logo-text">Rideshare Abuse <strong>Lawsuit</strong></span>
-      </a>
-      <p><strong>Legal Disclaimer:</strong> This website is attorney advertising. The information on this site is for general informational purposes only and does not constitute legal advice. Contacting us does not create an attorney‑client relationship. Past results do not guarantee future outcomes. No representation is made that the quality of legal services performed is greater than the quality of legal services performed by other lawyers. This advertisement is not for legal services related to an incident that occurred in California or that a California court would have jurisdiction over.</p>
-    </div>
-    <div class="footer-legal">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="/privacy/">Privacy Notice</a></li>
-        <li><a href="/ccpa-policy/">CCPA Privacy Policy</a></li>
-        <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
-        <li><a href="/ccpa/">CCPA Request</a></li>
-      </ul>
-    </div>
+
+  <!-- Top: logo left, disclaimer right -->
+  <div class="footer-top">
+    <a href="/" class="nav-logo">
+      <span class="logo-text">Rideshare Abuse <strong>Lawsuit</strong></span>
+    </a>
+    <p class="footer-disclaimer"><strong>Legal Disclaimer:</strong> This website is attorney advertising. The information on this site is for general informational purposes only and does not constitute legal advice. Contacting us does not create an attorney‑client relationship. Past results do not guarantee future outcomes. No representation is made that the quality of legal services performed is greater than the quality of legal services performed by other lawyers. This advertisement is not for legal services related to an incident that occurred in California or that a California court would have jurisdiction over.</p>
   </div>
+
+  <div class="footer-divider"></div>
+
+  <!-- Bottom: copyright left, nav right -->
   <div class="footer-bottom">
-    &copy; {{ "" | getYear }} Rideshare Abuse Lawsuit. All rights reserved.
+    <span class="footer-copy">&copy; {{ "" | getYear }} Rideshare Abuse Lawsuit. All rights reserved.</span>
+    <nav class="footer-nav">
+      <a href="/privacy/">Privacy Notice</a>
+      <a href="/ccpa-policy/">CCPA Privacy Policy</a>
+      <a href="/terms-conditions/">Terms &amp; Conditions</a>
+      <a href="/ccpa/">CCPA Request</a>
+    </nav>
   </div>
+
 </footer>
 
 <script src="/assets/js/main.js"></script>
