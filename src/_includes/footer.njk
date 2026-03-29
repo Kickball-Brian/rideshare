@@ -25,17 +25,19 @@
   font-weight: 600;
 }
 .footer-divider {
+  --divider-border-style: solid;
+  --divider-color: #757575;
+  --divider-border-width: 2px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 1px;
+  height: var(--divider-border-width);
 }
 .footer-divider::after {
   content: '';
   display: block;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.15;
+  height: var(--divider-border-width);
+  border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color);
 }
 .footer-bottom {
   display: grid;
