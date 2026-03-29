@@ -7,6 +7,98 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://rideshareabuselawsuit.org/style.min.css">
+<style>
+/* ── Footer overrides ─────────────────────────────────── */
+.site-footer {
+  padding: 32px 0 0 !important;
+  background: transparent !important;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  background: transparent !important;
+}
+.footer-top {
+  display: grid !important;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 48px;
+  padding-bottom: 24px;
+  background: transparent !important;
+}
+.footer-disclaimer {
+  font-size: 0.7rem !important;
+  font-weight: 400 !important;
+  line-height: 1.65;
+  margin: 0;
+  text-align: right;
+  max-width: none !important;
+}
+.footer-disclaimer strong { font-weight: 600; }
+.footer-divider {
+  --divider-border-style: solid;
+  --divider-color: #757575;
+  --divider-border-width: 2px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: var(--divider-border-width);
+  background: transparent !important;
+}
+.footer-divider::after {
+  content: '';
+  display: block;
+  height: var(--divider-border-width);
+  border-top: var(--divider-border-width) var(--divider-border-style) var(--divider-color);
+}
+.footer-bottom {
+  display: grid !important;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 18px 0 28px;
+  background: transparent !important;
+  border: none !important;
+  text-align: left !important;
+}
+.footer-copy {
+  font-size: 0.7rem !important;
+  font-weight: 400 !important;
+  color: inherit;
+}
+.footer-nav {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  list-style: none !important;
+}
+.footer-nav a {
+  font-size: 0.7rem !important;
+  font-weight: 400 !important;
+  text-decoration: none;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+  padding: 0 12px !important;
+  border-left: 1px solid currentColor !important;
+  background: transparent !important;
+}
+.footer-nav a:first-child {
+  border-left: none !important;
+  padding-left: 0 !important;
+}
+.footer-nav a:hover { opacity: 1; text-decoration: underline; }
+@media (max-width: 640px) {
+  .footer-top { grid-template-columns: 1fr; gap: 16px; }
+  .footer-disclaimer { text-align: left; }
+  .footer-bottom { grid-template-columns: 1fr; gap: 12px; }
+  .footer-nav { justify-content: flex-start; }
+}
+</style>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
